@@ -5,7 +5,7 @@ import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
-public class uquvYili {
+public class UquvYili {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -13,10 +13,10 @@ public class uquvYili {
     private LocalDate TugaganVaqt;
     private String izoh;
 
-    public uquvYili() {
+    public UquvYili() {
     }
 
-    public uquvYili(Long id, LocalDate boshlanganVaqt, LocalDate tugaganVaqt, String izoh) {
+    public UquvYili(Long id, LocalDate boshlanganVaqt, LocalDate tugaganVaqt, String izoh) {
         this.id = id;
         this.boshlanganVaqt = boshlanganVaqt;
         TugaganVaqt = tugaganVaqt;

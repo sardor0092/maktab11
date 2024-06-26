@@ -17,7 +17,7 @@ public class Dars {
     @ManyToOne
     private Xona xona;
     @ManyToOne
-    private uquvYili uquvYili;
+    private UquvYili uquvYili;
     @ManyToOne
     private Sinf sinfxona;
 
@@ -26,7 +26,7 @@ public class Dars {
     }
 
 
-    public Dars(Long id, Uquvchi uquvchi, Fan fan, Uqituvchi uqituvchi, Xona xona, maktab.uz.demo.entity.uquvYili uquvYili, Sinf sinfxona) {
+    public Dars(Long id, Uquvchi uquvchi, Fan fan, Uqituvchi uqituvchi, Xona xona, UquvYili uquvYili, Sinf sinfxona) {
         this.id = id;
         this.uquvchi = uquvchi;
         this.fan = fan;
@@ -77,11 +77,11 @@ public class Dars {
         this.xona = xona;
     }
 
-    public maktab.uz.demo.entity.uquvYili getUquvYili() {
+    public UquvYili getUquvYili() {
         return uquvYili;
     }
 
-    public void setUquvYili(maktab.uz.demo.entity.uquvYili uquvYili) {
+    public void setUquvYili(UquvYili uquvYili) {
         this.uquvYili = uquvYili;
     }
 
