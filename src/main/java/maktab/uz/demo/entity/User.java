@@ -5,6 +5,7 @@ import com.sun.istack.NotNull;
 
 import javax.persistence.*;
 import javax.validation.constraints.Size;
+import java.util.Set;
 
 @Entity
 @Table(name = "users")
@@ -29,6 +30,15 @@ public class User {
     @NotNull
     @Column(nullable = false)
     private String parol;
+
+
+    @ElementCollection(targetClass = Lavozim.class ,fetch = FetchType.EAGER)
+    @CollectionTable(name = "user_lavozim",
+    joinColumns = @JoinColumn(name = "user_id"))
+    @Column(name = "lavozim_id")
+    private Set<Lavozim> lavozimlar;
+
+
 
 
     private Boolean active;
@@ -92,5 +102,13 @@ public class User {
 
     public void setActive(Boolean active) {
         this.active = active;
+    }
+
+    public Set<Lavozim> getLavozimlar() {
+        return lavozimlar;
+    }
+
+    public void setLavozimlar(Set<Lavozim> lavozimlar) {
+        this.lavozimlar = lavozimlar;
     }
 }
